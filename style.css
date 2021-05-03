@@ -1,0 +1,246 @@
+
+body{
+    background:gray !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+a{
+    underline:none;
+    color:#3D3D3D;
+}
+
+.navbar{
+    height:80px;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background:white;
+}
+
+.navbar_logo{
+    font-size:1.2rem;
+    font-family: 'Pangolin', cursive;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.navbar_container{
+    display:flex;
+    width:auto;
+    height:100%;
+    align-items:center;
+    justify-content:justify-between;
+    padding:0 2rem;
+}
+
+.navbar_desktop{
+    display:flex;
+    width:100%;
+    height:100%;
+    align-items:center;
+}
+
+.navbar_desktop .navbar_menu{
+    flex:1;
+    height:100%;
+    display:flex;
+    align-items:center;
+    list-style:none;
+    padding-left:1rem;
+}
+
+.navbar_desktop .navbar_list{
+    height:100%;
+    display:flex;
+    align-items:center;
+}
+.navbar_desktop .navbar_link:hover{
+    background:lightGray;
+}
+
+
+.navbar_desktop .navbar_link{
+    height:100%;
+    display:flex;
+    align-items:center;
+    font-size:1rem;
+    font-weight:bold;
+    padding:0 1rem;
+}
+
+.navbar_desktop .navbar_actions{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+}
+
+.navbar_desktop .navbar_actions  > *{
+    margin:0 1rem 0 0;
+}
+
+.navbar_desktop .navbar_search{
+    width:200px;
+    padding:0.5rem 1rem;
+    border:none;
+    outline:none;
+    border-radius:16px;
+    background:lightGray;
+}
+
+.navbar_desktop .navbar_figure {
+    position:relative;
+    height:100%;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+}
+
+.navbar_desktop .navbar_avatar {
+    width:3rem;
+    height:3rem;
+    border-radius:100%;
+}
+
+.navbar_desktop .navbar_upload { 
+    padding:0.5rem 1rem;
+}
+
+
+.navbar_desktop .navbar_figure:hover  .navbar_dropdown{
+    transform:scaleY(1);
+}
+.navbar_desktop .navbar_dropdown:hover{
+    transform:scaleY(1);
+}
+
+.navbar_desktop .navbar_dropdown{
+    transition:all 123ms;
+    transform-origin:top;
+    white-space:nowrap;
+    display:inline-block;
+    position:absolute;
+    transform:scaleY(0);
+    top:80px;
+    right:0;
+}
+
+.navbar_desktop .navbar_dropdown .navbar_list:first-child{
+    margin-top:0.25rem;
+}
+
+.navbar_desktop .navbar_dropdown .navbar_list{
+    background:white;
+    padding:0.5rem 2rem;
+}
+
+.navbar_desktop .navbar_link{
+    cursor:pointer;
+}
+
+.navbar_desktop .navbar_dropdown .navbar_list:hover{
+    background:lightGray;
+}
+
+.navbar_desktop .navbar_dropdown .navbar_link{
+    cursor:pointer;
+    text-align:left;
+    width:100%;
+}
+
+/* navbar mobile */
+
+.navbar_mobile {
+    display:none;
+}
+
+.navbar_mobile .navbar_menu-toggle,.navbar_empty{
+    width:40px;
+    height:40px;
+}
+
+.navbar_mobile .navbar_logo{
+    font-family: 'Pangolin', cursive;
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.navbar_menu-toggle.active ~ .navbar_menu-wrapper{
+    transform:scaleY(1);
+}
+
+.navbar_mobile .navbar_menu-wrapper{
+    transform:scaleY(0);
+    transition:all 123ms;
+    transform-origin:top center;
+    background:white;
+    position:fixed;
+    top:80px;
+    left:0;
+    right:0;
+}
+
+.navbar_mobile .navbar_figure {
+    padding:1rem 0;
+    border-top:1px solid gray;
+    border-bottom:1px solid gray;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+}
+
+.navbar_mobile .navbar_name{
+    margin-left:1rem;
+    font-weight:bold;
+}
+
+.navbar_mobile .navbar_avatar {
+    margin:0 0 0 1.5rem;
+    background:gray;
+    width:3rem;
+    height:3rem;
+    border-radius:100%;
+}
+
+.navbar_mobile .navbar_menu.actions{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.navbar_mobile .navbar_menu.actions .navbar_list{
+    width:50%;
+}
+
+.navbar_mobile .navbar_menu .navbar_list{
+    display:flex;
+}
+
+.navbar_mobile .navbar_menu .navbar_link{
+    cursor:pointer;
+    width:100%;
+    padding:0.5rem 2rem;
+}
+
+.navbar_mobile .navbar_menu .navbar_link:hover{
+    background:lightGray;
+}
+
+@media only screen and (max-width: 900px) {
+    .navbar_desktop{
+        display:none;
+    }
+    .navbar_mobile{
+        display:flex;
+        width:100%;
+        align-items:center;
+        justify-content:space-between;
+    }
+}
